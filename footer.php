@@ -14,7 +14,7 @@
 ======================================
 -->
 
-<?php if (!is_page("118")) : ?>
+<?php if (!is_page("118") && !is_404()) : ?>
   <section class="contact top__contact">
     <div class="contact__inner inner--pc">
       <div class="contact__title section-header">

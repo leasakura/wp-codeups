@@ -83,7 +83,7 @@
       <div class="mv mv-sub mv--archive-works">
         <h2 class="mv-sub__text"><?php the_archive_title(); ?></h2>
       </div>
-    <?php elseif (is_single()) : ?>
+    <?php elseif (is_single() || is_404()) : ?>
       <div class="mv mv-sub mv-none"></div>
     <?php else : ?>
       <div class="mv mv-sub mv--<?php
@@ -102,7 +102,7 @@
 ======================================
 -->
 
-  <?php if (!is_front_page()) : ?>
+  <?php if (!is_front_page() && !is_404()) : ?>
     <div class="breadcrumbs inner">
       <?php
       if (function_exists('bcn_display')) {
